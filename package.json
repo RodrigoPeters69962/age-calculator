@@ -1,0 +1,17 @@
+{
+  "name": "age-calculator",
+  "version": "0.1.0",
+  "description": "Calculates age in years, months, and days from two dates, including month-end cases.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
