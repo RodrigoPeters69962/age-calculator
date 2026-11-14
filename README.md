@@ -25,3 +25,10 @@ This library makes one clear decision: when the reference day is the last day of
 ## Edge cases
 
 The awkward edge is a birth on the 29th, 30th, or 31st of a month when the reference month is shorter. The rule above resolves it consistently. Another edge is a birth on 29 February: on 28 February of a non-leap year, the rule makes the age exactly one year, not 11 months and 30 days. This is a deliberate choice; other libraries may differ.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
